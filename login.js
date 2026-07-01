@@ -1,11 +1,3 @@
-// Check if already logged in
-window.onload = function () {
-    if (localStorage.getItem("loggedIn") === "true") {
-        window.location.href = "dashboard.html";
-    }
-};
-
-// Login Function
 function login() {
 
     const username = document.getElementById("username").value.trim();
@@ -16,13 +8,12 @@ function login() {
         localStorage.setItem("loggedIn", "true");
         localStorage.setItem("username", username);
 
-        alert("✅ Login Successful!");
-
         window.location.href = "dashboard.html";
 
     } else {
 
-        alert("❌ Invalid Username or Password");
+        alert("Invalid Username or Password");
 
     }
+
 }
